@@ -70,8 +70,8 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFF6366F1).withOpacity(0.9),
-                        Color(0xFFEC4899).withOpacity(0.9),
+                        Color(0xFF0066FF).withOpacity(0.9),
+                        Color(0xFF00FFA3).withOpacity(0.9),
                       ],
                     ),
                     shape: BoxShape.circle,
@@ -125,7 +125,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                   ),
                   child: Icon(
                     Icons.search_rounded,
-                    color: Color(0xFF6366F1),
+                    color: Color(0xFF0066FF),
                     size: 20,
                   ),
                 ),
@@ -145,7 +145,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                   ),
                   child: Icon(
                     Icons.refresh_rounded,
-                    color: Color(0xFF10B981),
+                    color: Color(0xFF00FFA3),
                     size: 20,
                   ),
                 ),
@@ -169,8 +169,8 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF6366F1),
-                    Color(0xFFEC4899),
+                    Color(0xFF0066FF),
+                    Color(0xFF00FFA3),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -178,7 +178,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xFF6366F1).withOpacity(0.3),
+                    color: Color(0xFF0066FF).withOpacity(0.3),
                     blurRadius: 15,
                     spreadRadius: 3,
                   ),
@@ -224,7 +224,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                     currentIndex: _currentIndex,
                     onTap: (index) => setState(() => _currentIndex = index),
                     backgroundColor: Colors.transparent,
-                    selectedItemColor: Color(0xFF6366F1),
+                    selectedItemColor: Color(0xFF0066FF),
                     unselectedItemColor: Color(0xFF9CA3AF),
                     selectedLabelStyle: const TextStyle(
                       fontWeight: FontWeight.w600,
@@ -238,7 +238,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: _currentIndex == 0
-                                ? Color(0xFF6366F1).withOpacity(0.1)
+                                ? Color(0xFF0066FF).withOpacity(0.1)
                                 : Colors.transparent,
                             shape: BoxShape.circle,
                           ),
@@ -251,7 +251,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: _currentIndex == 1
-                                ? Color(0xFF6366F1).withOpacity(0.1)
+                                ? Color(0xFF0066FF).withOpacity(0.1)
                                 : Colors.transparent,
                             shape: BoxShape.circle,
                           ),
@@ -264,7 +264,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                           padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             color: _currentIndex == 2
-                                ? Color(0xFF6366F1).withOpacity(0.1)
+                                ? Color(0xFF0066FF).withOpacity(0.1)
                                 : Colors.transparent,
                             shape: BoxShape.circle,
                           ),
@@ -291,7 +291,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
             await authProvider.loadDoctorProfile();
             _refreshPatients();
           },
-          color: Color(0xFF6366F1),
+          color: Color(0xFF0066FF),
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -326,7 +326,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(
             child: CircularProgressIndicator(
-              color: Color(0xFF6366F1),
+              color: Color(0xFF0066FF),
             ),
           );
         }
@@ -365,7 +365,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                 ElevatedButton(
                   onPressed: _refreshPatients,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF6366F1),
+                    backgroundColor: Color(0xFF0066FF),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
@@ -419,7 +419,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                                   hintText: 'Search patients...',
                                   hintStyle: TextStyle(color: Color(0xFF9CA3AF)),
                                   border: InputBorder.none,
-                                  icon: Icon(Icons.search_rounded, color: Color(0xFF6366F1)),
+                                  icon: Icon(Icons.search_rounded, color: Color(0xFF0066FF)),
                                 ),
                               ),
                             ),
@@ -432,7 +432,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                             ),
                             child: Icon(
                               Icons.filter_list_rounded,
-                              color: Color(0xFF6366F1),
+                              color: Color(0xFF0066FF),
                             ),
                           ),
                         ],
@@ -459,7 +459,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                   Text(
                     'Total',
                     style: TextStyle(
-                      color: Color(0xFF6366F1),
+                      color: Color(0xFF0066FF),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -514,7 +514,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                           Navigator.pushNamed(context, '/create_patient');
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF6366F1),
+                          backgroundColor: Color(0xFF0066FF),
                           foregroundColor: Colors.white,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
@@ -534,7 +534,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
               Expanded(
                 child: RefreshIndicator(
                   onRefresh: _refreshPatients,
-                  color: Color(0xFF6366F1),
+                  color: Color(0xFF0066FF),
                   child: ListView.builder(
                     padding: const EdgeInsets.all(20),
                     itemCount: patients.length,
@@ -574,8 +574,8 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
                                       colors: [
-                                        Color(0xFF6366F1).withOpacity(0.8),
-                                        Color(0xFFEC4899).withOpacity(0.8),
+                                        Color(0xFF0066FF).withOpacity(0.8),
+                                        Color(0xFF00FFA3).withOpacity(0.8),
                                       ],
                                     ),
                                     shape: BoxShape.circle,
@@ -627,17 +627,17 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                                         vertical: 4,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF6366F1).withOpacity(0.1),
+                                        color: Color(0xFF0066FF).withOpacity(0.1),
                                         borderRadius: BorderRadius.circular(8),
                                         border: Border.all(
-                                          color: Color(0xFF6366F1).withOpacity(0.2),
+                                          color: Color(0xFF0066FF).withOpacity(0.2),
                                         ),
                                       ),
                                       child: Text(
                                         patient.uniqueCode,
                                         style: TextStyle(
                                           fontSize: 11,
-                                          color: Color(0xFF6366F1),
+                                          color: Color(0xFF0066FF),
                                           fontWeight: FontWeight.w600,
                                         ),
                                       ),
@@ -692,8 +692,8 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFF6366F1).withOpacity(0.1),
-                  Color(0xFFEC4899).withOpacity(0.1),
+                  Color(0xFF0066FF).withOpacity(0.1),
+                  Color(0xFF00FFA3).withOpacity(0.1),
                 ],
               ),
               shape: BoxShape.circle,
@@ -709,7 +709,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
               child: Icon(
                 Icons.bar_chart_rounded,
                 size: 80,
-                color: Color(0xFF6366F1),
+                color: Color(0xFF0066FF),
               ),
             ),
           ),
@@ -760,8 +760,8 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFF6366F1).withOpacity(0.9),
-                  Color(0xFFEC4899).withOpacity(0.9),
+                  Color(0xFF0066FF).withOpacity(0.9),
+                  Color(0xFF00FFA3).withOpacity(0.9),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -831,25 +831,25 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
         _quickActionCard(
           'New Patient',
           Icons.person_add_alt_1_rounded,
-          Color(0xFF6366F1),
+          Color(0xFF0066FF),
           '/create_patient',
         ),
         _quickActionCard(
           'Search',
           Icons.search_rounded,
-          Color(0xFF10B981),
+          Color(0xFF00FFA3),
           '/search_patient',
         ),
         _quickActionCard(
           'Access Record',
           Icons.medical_services_rounded,
-          Color(0xFF8B5CF6),
+          Color(0xFF00D4FF),
           '/access_medical_record',
         ),
         _quickActionCard(
           'Analytics',
           Icons.bar_chart_rounded,
-          Color(0xFFF59E0B),
+          Color(0xFFFFD700),
           '/analytics',
         ),
       ],
@@ -894,8 +894,8 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Color(0xFF8B5CF6),
-                            Color(0xFF7C3AED),
+                            Color(0xFF00D4FF),
+                            Color(0xFF0066FF),
                           ],
                         ),
                         shape: BoxShape.circle,
@@ -957,7 +957,7 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                             prefixIcon: Container(
                               margin: EdgeInsets.only(right: 12),
                               padding: const EdgeInsets.all(12),
-                              child: Icon(Icons.vpn_key_rounded, color: Color(0xFF6366F1)),
+                              child: Icon(Icons.vpn_key_rounded, color: Color(0xFF0066FF)),
                             ),
                             border: InputBorder.none,
                             contentPadding: const EdgeInsets.symmetric(
@@ -998,14 +998,14 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Color(0xFF8B5CF6),
-                            Color(0xFF7C3AED),
+                            Color(0xFF00D4FF),
+                            Color(0xFF0066FF),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
                           BoxShadow(
-                            color: Color(0xFF8B5CF6).withOpacity(0.3),
+                            color: Color(0xFF00D4FF).withOpacity(0.3),
                             blurRadius: 10,
                             spreadRadius: 2,
                           ),
