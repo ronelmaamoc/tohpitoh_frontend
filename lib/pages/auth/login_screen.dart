@@ -41,8 +41,8 @@ class _LoginPageState extends State<LoginPage> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xFF0066FF).withOpacity(0.9),
-              Color(0xFF00FFA3).withOpacity(0.8),
+              Colors.blue.shade900.withOpacity(0.9),
+              Colors.teal.shade800.withOpacity(0.8),
             ],
           ),
         ),
@@ -85,25 +85,25 @@ class _LoginPageState extends State<LoginPage> {
                     margin: const EdgeInsets.only(bottom: 20),
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: Color(0xFFFEF2F2),
+                      color: Colors.red.shade50,
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: Color(0xFFFECACA)),
+                      border: Border.all(color: Colors.red.shade200),
                     ),
                     child: Row(
                       children: [
-                        Icon(Icons.error_outline, color: Color(0xFFDC2626)),
+                        Icon(Icons.error_outline, color: Colors.red.shade700),
                         const SizedBox(width: 12),
                         Expanded(
                           child: Text(
                             authProvider.error!,
                             style: TextStyle(
-                              color: Color(0xFFDC2626),
+                              color: Colors.red.shade700,
                               fontSize: 14,
                             ),
                           ),
                         ),
                         IconButton(
-                          icon: Icon(Icons.close, color: Color(0xFFDC2626)),
+                          icon: Icon(Icons.close, color: Colors.red.shade700),
                           onPressed: () => authProvider.clearError(),
                         ),
                       ],
@@ -131,16 +131,16 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'MedSecure Login',
+                            'Connexion Médecin',
                             style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.w800,
-                              color: Color(0xFF0066FF),
+                              color: Colors.blue.shade900,
                             ),
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            'Secure Healthcare Professional Access',
+                            'Accédez à votre espace professionnel',
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey.shade600,
@@ -157,7 +157,7 @@ class _LoginPageState extends State<LoginPage> {
                               fontWeight: FontWeight.w500,
                             ),
                             decoration: InputDecoration(
-                              labelText: 'Healthcare Email',
+                              labelText: 'Email professionnel',
                               labelStyle: TextStyle(
                                 color: Colors.grey.shade600,
                                 fontWeight: FontWeight.w500,
@@ -166,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
                                 padding: const EdgeInsets.all(12),
                                 child: Icon(
                                   Icons.email_rounded,
-                                  color: Color(0xFF0066FF),
+                                  color: Colors.blue.shade700,
                                 ),
                               ),
                               border: OutlineInputBorder(
@@ -181,8 +181,8 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             validator: (value) {
-                              if (value!.isEmpty) return 'Email required';
-                              if (!value.contains('@')) return 'Invalid email format';
+                              if (value!.isEmpty) return 'Email requis';
+                              if (!value.contains('@')) return 'Email invalide';
                               return null;
                             },
                           ),
@@ -197,7 +197,7 @@ class _LoginPageState extends State<LoginPage> {
                               fontWeight: FontWeight.w500,
                             ),
                             decoration: InputDecoration(
-                              labelText: 'Password',
+                              labelText: 'Mot de passe',
                               labelStyle: TextStyle(
                                 color: Colors.grey.shade600,
                                 fontWeight: FontWeight.w500,
@@ -206,7 +206,7 @@ class _LoginPageState extends State<LoginPage> {
                                 padding: const EdgeInsets.all(12),
                                 child: Icon(
                                   Icons.lock_rounded,
-                                  color: Color(0xFF0066FF),
+                                  color: Colors.blue.shade700,
                                 ),
                               ),
                               suffixIcon: IconButton(
@@ -234,8 +234,8 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                             validator: (value) {
-                              if (value!.isEmpty) return 'Password required';
-                              if (value.length < 6) return 'Minimum 6 characters';
+                              if (value!.isEmpty) return 'Mot de passe requis';
+                              if (value.length < 6) return 'Minimum 6 caractères';
                               return null;
                             },
                           ),
@@ -248,13 +248,13 @@ class _LoginPageState extends State<LoginPage> {
                             child: ElevatedButton(
                               onPressed: authProvider.isLoading ? null : _login,
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xFF0066FF),
+                                backgroundColor: Colors.blue.shade700,
                                 foregroundColor: Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 elevation: 5,
-                                shadowColor: Color(0xFF0066FF).withOpacity(0.3),
+                                shadowColor: Colors.blue.withOpacity(0.3),
                                 padding: const EdgeInsets.symmetric(
                                   vertical: 16,
                                 ),
@@ -274,7 +274,7 @@ class _LoginPageState extends State<LoginPage> {
                                         const Icon(Icons.login_rounded),
                                         const SizedBox(width: 10),
                                         Text(
-                                          'Authenticate',
+                                          'Se connecter',
                                           style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.w600,
@@ -298,14 +298,14 @@ class _LoginPageState extends State<LoginPage> {
                                   children: [
                                     Icon(
                                       Icons.person_add_alt_1_rounded,
-                                      color: Color(0xFF0066FF),
+                                      color: Colors.blue.shade700,
                                       size: 20,
                                     ),
                                     const SizedBox(width: 8),
                                     Text(
-                                      'Create Account',
+                                      'Créer un compte',
                                       style: TextStyle(
-                                        color: Color(0xFF0066FF),
+                                        color: Colors.blue.shade700,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -320,14 +320,14 @@ class _LoginPageState extends State<LoginPage> {
                                   children: [
                                     Icon(
                                       Icons.qr_code_scanner_rounded,
-                                      color: Color(0xFF00FFA3),
+                                      color: Colors.teal.shade600,
                                       size: 20,
                                     ),
                                     const SizedBox(width: 8),
                                     Text(
-                                      'Patient Access',
+                                      'Accès patient',
                                       style: TextStyle(
-                                        color: Color(0xFF00FFA3),
+                                        color: Colors.teal.shade600,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -345,7 +345,7 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 40),
                 // Footer (sans section démo)
                 Text(
-                  '© 2024 MedSecure Systems. All rights reserved. TOPITOH MKR',
+                  '© 2024 MediCare Pro. Tous droits réservés.',
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.7),
                     fontSize: 12,
