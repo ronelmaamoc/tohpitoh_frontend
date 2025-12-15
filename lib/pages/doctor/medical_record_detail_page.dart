@@ -25,8 +25,8 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
             shaderCallback: (bounds) {
               return LinearGradient(
                 colors: [
-                  Color(0xFF6366F1),
-                  Color(0xFFEC4899),
+                  Color(0xFF0066FF),
+                  Color(0xFF00FFA3),
                 ],
               ).createShader(bounds);
             },
@@ -39,9 +39,9 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
             ),
           ),
           bottom: TabBar(
-            labelColor: Color(0xFF6366F1),
+            labelColor: Color(0xFF0066FF),
             unselectedLabelColor: Color(0xFF9CA3AF),
-            indicatorColor: Color(0xFF6366F1),
+            indicatorColor: Color(0xFF0066FF),
             indicatorSize: TabBarIndicatorSize.label,
             tabs: const [
               Tab(icon: Icon(Icons.person), text: 'Profile'),
@@ -63,7 +63,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
                 ),
                 child: Icon(
                   Icons.edit_rounded,
-                  color: Color(0xFF6366F1),
+                  color: Color(0xFF0066FF),
                 ),
               ),
               onPressed: () {
@@ -82,7 +82,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
                 ),
                 child: Icon(
                   Icons.add_rounded,
-                  color: Color(0xFF10B981),
+                  color: Color(0xFF00FFA3),
                 ),
               ),
               onPressed: () {
@@ -148,8 +148,8 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              Color(0xFF6366F1).withOpacity(0.9),
-                              Color(0xFFEC4899).withOpacity(0.9),
+                              Color(0xFF0066FF).withOpacity(0.9),
+                              Color(0xFF00FFA3).withOpacity(0.9),
                             ],
                           ),
                           shape: BoxShape.circle,
@@ -414,8 +414,8 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xFF6366F1),
-                      Color(0xFFEC4899),
+                      Color(0xFF0066FF),
+                      Color(0xFF00FFA3),
                     ],
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
@@ -423,7 +423,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF6366F1).withOpacity(0.3),
+                      color: Color(0xFF0066FF).withOpacity(0.3),
                       blurRadius: 10,
                       spreadRadius: 2,
                     ),
@@ -532,7 +532,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                Color(0xFFEC4899).withOpacity(0.1),
+                Color(0xFF00FFA3).withOpacity(0.1),
                 Colors.transparent,
               ],
             ),
@@ -549,7 +549,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                Color(0xFF6366F1).withOpacity(0.1),
+                Color(0xFF0066FF).withOpacity(0.1),
                 Colors.transparent,
               ],
             ),
@@ -585,8 +585,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
             ),
           ),
         ],
-      ),
-    );
+      );
   }
 
   Widget _consultationItem(String date, String reason) {
@@ -607,15 +606,15 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFF6366F1).withOpacity(0.1),
-                  Color(0xFFEC4899).withOpacity(0.1),
+                  Color(0xFF0066FF).withOpacity(0.1),
+                  Color(0xFF00FFA3).withOpacity(0.1),
                 ],
               ),
               shape: BoxShape.circle,
             ),
             child: Icon(
               Icons.medical_services_rounded,
-              color: Color(0xFF6366F1),
+              color: Color(0xFF0066FF),
               size: 24,
             ),
           ),
@@ -759,7 +758,7 @@ class _MedicalRecordDetailPageState extends State<MedicalRecordDetailPage> {
                   date,
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
-                    color: Color(0xFF6366F1),
+                    color: Color(0xFF0066FF),
                   ),
                 ),
                 const SizedBox(height: 8),

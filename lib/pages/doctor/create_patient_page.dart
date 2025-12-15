@@ -78,8 +78,8 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
           shaderCallback: (bounds) {
             return LinearGradient(
               colors: [
-                Color(0xFF6366F1),
-                Color(0xFFEC4899),
+                Color(0xFF0066FF),
+                Color(0xFF00FFA3),
               ],
             ).createShader(bounds);
           },
@@ -104,7 +104,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
               ),
               child: Icon(
                 Icons.save_rounded,
-                color: Color(0xFF6366F1),
+                color: Color(0xFF0066FF),
               ),
             ),
             onPressed: _isSaving ? null : _createPatient,
@@ -163,8 +163,8 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color(0xFF6366F1).withOpacity(0.9),
-                  Color(0xFFEC4899).withOpacity(0.9),
+                  Color(0xFF0066FF).withOpacity(0.9),
+                  Color(0xFF00FFA3).withOpacity(0.9),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -482,8 +482,8 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xFF6366F1),
-                Color(0xFFEC4899),
+                Color(0xFF0066FF),
+                Color(0xFF00FFA3),
               ],
             ),
             shape: BoxShape.circle,
@@ -543,7 +543,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
               padding: const EdgeInsets.all(12),
               child: Icon(
                 icon,
-                color: Color(0xFF6366F1),
+                color: Color(0xFF0066FF),
               ),
             ),
             border: OutlineInputBorder(
@@ -604,7 +604,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                 padding: const EdgeInsets.all(12),
                 child: Icon(
                   Icons.transgender_rounded,
-                  color: Color(0xFF6366F1),
+                  color: Color(0xFF0066FF),
                 ),
               ),
             ),
@@ -653,7 +653,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
               children: [
                 Icon(
                   Icons.calendar_today_rounded,
-                  color: Color(0xFF6366F1),
+                  color: Color(0xFF0066FF),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -707,7 +707,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                     });
                   },
                   activeColor: Colors.transparent,
-                  checkColor: Color(0xFF6366F1),
+                  checkColor: Color(0xFF0066FF),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6),
                   ),
@@ -821,8 +821,8 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xFF6366F1),
-                Color(0xFFEC4899),
+                Color(0xFF0066FF),
+                Color(0xFF00FFA3),
               ],
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
@@ -830,7 +830,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFF6366F1).withOpacity(0.3),
+                color: Color(0xFF0066FF).withOpacity(0.3),
                 blurRadius: 10,
                 spreadRadius: 2,
               ),
@@ -878,7 +878,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                Color(0xFFEC4899).withOpacity(0.1),
+                Color(0xFF00FFA3).withOpacity(0.1),
                 Colors.transparent,
               ],
             ),
@@ -895,7 +895,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                Color(0xFF6366F1).withOpacity(0.1),
+                Color(0xFF0066FF).withOpacity(0.1),
                 Colors.transparent,
               ],
             ),
@@ -915,7 +915,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
         return Theme(
           data: ThemeData.light().copyWith(
             colorScheme: ColorScheme.light(
-              primary: Color(0xFF6366F1),
+              primary: Color(0xFF0066FF),
               onPrimary: Colors.white,
               surface: Colors.white,
               onSurface: Color(0xFF374151),
@@ -1010,8 +1010,8 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            Color(0xFF10B981).withOpacity(0.1),
-                            Color(0xFF059669).withOpacity(0.1),
+                            Color(0xFF00FFA3).withOpacity(0.1),
+                            Color(0xFF34C759).withOpacity(0.1),
                           ],
                         ),
                         shape: BoxShape.circle,
@@ -1019,7 +1019,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                       child: Icon(
                         Icons.check_circle_rounded,
                         size: 48,
-                        color: Color(0xFF10B981),
+                        color: Color(0xFF00FFA3),
                       ),
                     ),
                     const SizedBox(height: 24),
@@ -1066,7 +1066,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                             style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.w800,
-                              color: Color(0xFF6366F1),
+                              color: Color(0xFF0066FF),
                               letterSpacing: 2,
                             ),
                           ),
@@ -1086,7 +1086,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                               style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.w700,
-                                color: Color(0xFF10B981),
+                                color: Color(0xFF00FFA3),
                               ),
                             ),
                             const SizedBox(height: 8),
@@ -1119,7 +1119,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                             child: Text(
                               'Copy Code',
                               style: TextStyle(
-                                color: Color(0xFF6366F1),
+                                color: Color(0xFF0066FF),
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -1133,7 +1133,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                               Navigator.pop(context); // Return to dashboard
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Color(0xFF6366F1),
+                              backgroundColor: Color(0xFF0066FF),
                               foregroundColor: Colors.white,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
@@ -1228,7 +1228,7 @@ class _CreatePatientPageState extends State<CreatePatientPage> {
                     ElevatedButton(
                       onPressed: () => Navigator.pop(context),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFF6366F1),
+                        backgroundColor: Color(0xFF0066FF),
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),

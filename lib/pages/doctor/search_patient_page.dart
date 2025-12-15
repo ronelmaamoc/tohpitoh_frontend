@@ -41,8 +41,8 @@ class _SearchPatientPageState extends State<SearchPatientPage> {
           shaderCallback: (bounds) {
             return LinearGradient(
               colors: [
-                Color(0xFF6366F1),
-                Color(0xFFEC4899),
+                Color(0xFF0066FF),
+                Color(0xFF00FFA3),
               ],
             ).createShader(bounds);
           },
@@ -107,7 +107,7 @@ class _SearchPatientPageState extends State<SearchPatientPage> {
                                       height: 20,
                                       child: CircularProgressIndicator(
                                         strokeWidth: 2,
-                                        color: Color(0xFF6366F1),
+                                        color: Color(0xFF0066FF),
                                       ),
                                     ),
                                   )
@@ -330,7 +330,7 @@ class _SearchPatientPageState extends State<SearchPatientPage> {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                Color(0xFFEC4899).withOpacity(0.1),
+                Color(0xFF00FFA3).withOpacity(0.1),
                 Colors.transparent,
               ],
             ),
@@ -347,7 +347,7 @@ class _SearchPatientPageState extends State<SearchPatientPage> {
             shape: BoxShape.circle,
             gradient: RadialGradient(
               colors: [
-                Color(0xFF6366F1).withOpacity(0.1),
+                Color(0xFF0066FF).withOpacity(0.1),
                 Colors.transparent,
               ],
             ),
@@ -396,12 +396,12 @@ class _SearchPatientPageState extends State<SearchPatientPage> {
 
   Color _getColorFromName(String name) {
     final colors = [
-      Color(0xFF6366F1),
-      Color(0xFF8B5CF6),
-      Color(0xFF10B981),
-      Color(0xFFF59E0B),
-      Color(0xFFEC4899),
-      Color(0xFF3B82F6),
+      Color(0xFF0066FF),
+      Color(0xFF00D4FF),
+      Color(0xFF00FFA3),
+      Color(0xFFFFD700),
+      Color(0xFF00FFA3),
+      Color(0xFF0066FF),
     ];
     final index = name.length % colors.length;
     return colors[index];
